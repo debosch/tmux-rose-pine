@@ -353,29 +353,29 @@ main() {
     fi
 
     # Window appearence switcher: 3 options for the user
-    if [[ "$window_separator" != "" ]] ; then
-        window_status_format=$custom_window_sep
-        window_status_current_format=$custom_window_sep_current
-        setw window-status-format "$window_status_format"
-        setw window-status-current-format "$window_status_current_format"
-
-    elif [[ "$show_current_program" == "on" ]]; then
-        window_status_format=$show_window_in_window_status
-        window_status_current_format=$show_window_in_window_status_current
-        setw window-status-format "$window_status_format"
-        setw window-status-current-format "$window_status_current_format"
-    # See line 268
-    elif [[ "$window_directory" ]]; then
-        local window_status_format=$show_directory_in_window_status
-        local window_status_current_format=$show_directory_in_window_status_current
-        setw window-status-format "$window_status_format"
-        setw window-status-current-format "$window_status_current_format"
-        #
-    # Base behaviour, but whit cool colors
-    elif [[ "$default_window_behavior" == "on" || "$default_window_behavior" == "" ]]; then
-        unset_option window-status-format
-        unset_option window-status-current-format
-    fi
+    # if [[ "$window_separator" != "" ]] ; then
+    #     window_status_format=$custom_window_sep
+    #     window_status_current_format=$custom_window_sep_current
+    #     setw window-status-format "$window_status_format"
+    #     setw window-status-current-format "$window_status_current_format"
+    #
+    # elif [[ "$show_current_program" == "on" ]]; then
+    #     window_status_format=$show_window_in_window_status
+    #     window_status_current_format=$show_window_in_window_status_current
+    #     setw window-status-format "$window_status_format"
+    #     setw window-status-current-format "$window_status_current_format"
+    # # See line 268
+    # elif [[ "$window_directory" ]]; then
+    #     local window_status_format=$show_directory_in_window_status
+    #     local window_status_current_format=$show_directory_in_window_status_current
+    #     setw window-status-format "$window_status_format"
+    #     setw window-status-current-format "$window_status_current_format"
+    #     #
+    # # Base behaviour, but whit cool colors
+    # elif [[ "$default_window_behavior" == "on" || "$default_window_behavior" == "" ]]; then
+    #     unset_option window-status-format
+    #     unset_option window-status-current-format
+    # fi
 
     if [[ "$user" == "on" ]]; then
         right_column=$right_column$show_user
