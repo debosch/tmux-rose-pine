@@ -438,11 +438,11 @@ main() {
     fi
 
     # Defaults to a NerdFont icon, user can change through an option
-    if [[ "$window_status_separator" != "  " ]]; then
-        setw window-status-separator "$window_status_separator"
-    else
-        setw window-status-separator "  "
-    fi
+    # if [[ "$window_status_separator" != "  " ]]; then
+    #     setw window-status-separator "$window_status_separator"
+    # else
+    #     setw window-status-separator "  "
+    # fi
 
     # Leaves only the window list on the left side
     if [[ "$only_windows" == "on" ]]; then
